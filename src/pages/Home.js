@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import Compliment from '../components/Compliment'
-import axios from 'axios'
 import Client from '../services/api'
 
 const Home = () => {
@@ -10,16 +9,18 @@ const Home = () => {
   useEffect(() => {
     const getComplimentList = async () => {
       const response = await Client.get(`compliments`)
-      setComplimentList(response?.data.compliments)
-      console.log(response)
+      setComplimentList(response.data)
     }
     getComplimentList()
   }, [])
+  
+  const randomCompliment = complimentList[Math.floor(Math.random() * complimentList.length)] 
+
 
 
   return (
     <div>
-      HOME
+      <Compliment id={randomCompliment.id} language={randomCompliment.language} nativeCompliment={randomCompliment.nativeCompliment} translation={randomCompliment.translation}/>
     </div>
   )
 }
