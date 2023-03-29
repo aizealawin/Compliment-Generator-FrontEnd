@@ -11,6 +11,7 @@ const Home = () => {
     const getComplimentList = async () => {
       const response = await Client.get(`compliments`)
       setComplimentList(response?.data.compliments)
+      console.log(response)
     }
     getComplimentList()
   }, [])
