@@ -5,14 +5,20 @@ import Client from '../services/api'
 
 const Home = () => {
   const [complimentList, setComplimentList] = useState([])
+  const [hasLoaded, setHasLoaded] = useState(false)
 
   useEffect(() => {
     const getComplimentList = async () => {
       const response = await Client.get(`compliments`)
       setComplimentList(response.data)
+      if (complimentList.length >= 0){
+        setHasLoaded(true)
+      }
     }
     getComplimentList()
   }, [])
+  console.log(hasLoaded)
+  console.log(complimentList)
   
   const randomCompliment = complimentList[Math.floor(Math.random() * complimentList.length)] 
 
@@ -20,7 +26,7 @@ const Home = () => {
 
   return (
     <div>
-      <Compliment id={randomCompliment.id} language={randomCompliment.language} nativeCompliment={randomCompliment.nativeCompliment} translation={randomCompliment.translation}/>
+      {hasLoaded && <Compliment id={randomCompliment.id} language={randomCompliment.language} nativeCompliment={randomCompliment.nativeCompliment} translation={randomCompliment.translation}/>}
     </div>
   )
 }
