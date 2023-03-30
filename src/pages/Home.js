@@ -2,6 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Compliment from '../components/Compliment'
 import Client from '../services/api'
+import MoreInfo from '../components/MoreInfo'
+
 
 const Home = () => {
   const [complimentList, setComplimentList] = useState([])
@@ -36,8 +38,8 @@ const Home = () => {
 
   return (
     <div>
+      <MoreInfo/>
       {
-      
       hasLoaded && (<Compliment id={randomCompliment.id} language={randomCompliment.language} nativeCompliment={randomCompliment.nativeCompliment} translation={randomCompliment.translation}/>
       
       )
