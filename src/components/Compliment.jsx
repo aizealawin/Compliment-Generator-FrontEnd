@@ -4,9 +4,9 @@ const Compliment = ({ id, language, nativeCompliment, translation }) => {
   return (
     <div className='compliment-holder'>
       {/* <div>id: {id}</div> */}
-      <div className='language'>Language: {language}</div>
-      <div className='compliment'>Compliment: {nativeCompliment}</div>
-      <div className='translation'>Translation: {translation}</div>
+      <div className='language, inner'>Language: {language}</div>
+      <div className='compliment inner'>Compliment: {nativeCompliment}</div>
+      <div className='translation inner'>Translation: {translation}</div>
     </div>
   )
 }

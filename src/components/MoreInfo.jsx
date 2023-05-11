@@ -8,20 +8,17 @@ const MoreInfo = () => {
       <button
         onClick={() => setOpen(!open)}
         type="button"
-        className="btn btn-primary"
+        className="info-btn"
         data-toggle="modal"
       >
-        ?
+        More Info
       </button>
       {open && (
         <div
-          className="modal fade"
-          tabIndex="-1"
-          role="dialog"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
+          className="popup overlay"
         >
-          <h1>Hello, I'm Kusal!</h1>
+          <h2>Hello, I'm Kusal!</h2>
+          <p>lore ipsum</p>
         </div>
       )}
     </>

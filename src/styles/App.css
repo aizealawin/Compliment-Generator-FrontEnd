@@ -1,8 +1,44 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 html {
   background: url(https://media.discordapp.net/attachments/405555521551335424/1091033551102816297/Slide_16_9_-_6.png?width=1572&height=884);
   background-size: 100% 100;
+  min-height: 100vh;
+}
+
+.body {
+  text-align: center;
+  margin: auto;
+  /* background-color: brown; */
+  min-height: 100vh;
+}
+
+.info-btn {
+  float: left;
+}
+
+.compliment-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  /* background-color: orange; */
+  gap: 10px 20px;
+  top: 50%;
+  left: 50%;
+  width: 30em;
+  height: 18em;
+  margin-top: -9em;
+  margin-left: -15em;
+  position: absolute;
+}
+
+.modal {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-style: solid;
+  padding: 10px;
+
 }

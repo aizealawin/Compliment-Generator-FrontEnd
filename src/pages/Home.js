@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Compliment from '../components/Compliment'
 import Client from '../services/api'
 import MoreInfo from '../components/MoreInfo'
+import Popup from 'reactjs-popup'
 
 
 const Home = () => {
@@ -37,17 +38,42 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <MoreInfo/>
-      {
-      hasLoaded && (<Compliment id={randomCompliment.id} language={randomCompliment.language} nativeCompliment={randomCompliment.nativeCompliment} translation={randomCompliment.translation}/>
+    <div className='body'>
+            <Popup trigger=
+                {<button> More Info </button>}
+                modal nested>
+                {
+                    close => (
+                        <div className='modal'>
+                            <div className='content'>
+                                Kusal Tholka Mudalige
+                            </div>
+                            <div>
+                                <button onClick=
+                                    {() => close()}>
+                                        Close modal
+                                </button>
+                            </div>
+                        </div>
+                    )
+                }
+            </Popup>
       
+      
+      {
+      hasLoaded && (<Compliment 
+        id={randomCompliment.id} 
+        language={randomCompliment.language} 
+        nativeCompliment={randomCompliment.nativeCompliment} 
+        translation={randomCompliment.translation}/>
       )
       
     }
-    {<button onClick={refresh}>Refresh</button>}
-    
 
+    <button className='refresh' onClick={refresh}>Refresh</button>
+
+    
+    
     </div>
   )
 }
