@@ -46,10 +46,15 @@ const Home = () => {
                     close => (
                         <div className='modal'>
                             <div className='content'>
-                                Hello, I'm Kusal!
+                                <p>Hello, I'm Kusal!</p>
                                 <p>Thank you for taking the time to check out this little app I made! I have a passion for language and uplifting others so I decided to practice my Spring knowledge to develop an API that combined the two thoughts. All compliments are sourced from friends and family so I apologize for any discrepencies or translation errors!</p>
 
                                 <p>If you're interest in contributing a compliment of your own or find a bug please feel free to reach out with the links below!</p>
+                            </div>
+                            <div className='links'>
+                              <a> Twitter </a>
+                              <a> LinkedIn </a>
+                              <a> Github</a>
                             </div>
                             <div>
                                 <button onClick=
