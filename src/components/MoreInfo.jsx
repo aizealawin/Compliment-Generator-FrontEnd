@@ -17,8 +17,7 @@ const MoreInfo = () => {
         <div
           className="popup overlay"
         >
-          <h2>Hello, I'm Kusal!</h2>
-          <p>lore ipsum</p>
+
         </div>
       )}
     </>
