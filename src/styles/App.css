@@ -13,10 +13,12 @@ html {
   margin: auto;
   /* background-color: brown; */
   min-height: 100vh;
+  position: relative;
 }
 
 .info-btn {
-  float: left;
+  position: absolute;
+
 }
 
 .compliment-holder {
@@ -42,4 +44,17 @@ html {
   padding: 10px;
   margin: 12%;
 
+}
+
+.refresh {
+  position: absolute;
+  bottom: 30%;
+  left: 45%;
+
+}
+
+.more-info {
+  position: absolute;
+  top: 1%;
+  left: 1%;
 }

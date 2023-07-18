@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div className='body'>
             <Popup trigger=
-                {<button> More Info </button>}
+                {<button className='more-info'> More Info </button>}
                 modal nested>
                 {
                     close => (
